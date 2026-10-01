@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<!-- MOBILE-FIRST: bắt buộc có viewport để trang responsive trên điện thoại -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ===== SEO CƠ BẢN: title + description chứa từ khóa local (dịch vụ + khu vực) ===== -->
+<title>Nha khoa Sài Gòn Smile – Nha khoa uy tín Quận 3, TP.HCM</title>
+<meta name="description" content="Nha khoa Sài Gòn Smile tại Quận 3, TP.HCM: niềng răng, bọc sứ, trồng implant, tẩy trắng. Đặt lịch nhanh, gọi ngay 028 1234 5678.">
+<link rel="canonical" href="https://www.example.com/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0f766e">
+
+<!-- Open Graph (chia sẻ mạng xã hội) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nha khoa Sài Gòn Smile – Quận 3, TP.HCM">
+<meta property="og:description" content="Niềng răng, bọc sứ, implant – đặt lịch ngay.">
+<meta property="og:url" content="https://www.example.com/">
+<meta property="og:locale" content="vi_VN">
+
+<!-- ===== STRUCTURED DATA: LocalBusiness (NAP + giờ mở cửa + tọa độ + review) =====
+     Thay toàn bộ thông tin bằng dữ liệu THẬT. NAP phải GIỐNG HỆT Google Business Profile.
+     Chỉ khai aggregateRating khi khớp với review thật hiển thị trên trang. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "name": "Nha khoa Sài Gòn Smile",
+  "url": "https://www.example.com/",
+  "telephone": "+842812345678",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "123 Võ Văn Tần",
+    "addressLocality": "Quận 3",
+    "addressRegion": "TP. Hồ Chí Minh",
+    "postalCode": "700000",
+    "addressCountry": "VN"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 10.7769, "longitude": 106.6870 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "08:00", "closes": "19:00" }
+  ],
+  "areaServed": "TP. Hồ Chí Minh",
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "126" }
+}
+</script>
+
+<!-- FAQ schema: tăng cơ hội hiển thị rich result -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Phòng khám có làm việc cuối tuần không?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Phòng khám mở cửa từ thứ Hai đến thứ Bảy, 8:00–19:00." } },
+    { "@type": "Question", "name": "Làm sao để đặt lịch khám?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Bạn có thể gọi 028 1234 5678 hoặc điền form đặt lịch trên website." } }
+  ]
+}
+</script>
+
+<style>
+/* ===== MOBILE-FIRST CSS: viết cho màn hình nhỏ trước, mở rộng bằng min-width ===== */
+:root{
+  --primary:#0f766e; --primary-dark:#0b5a54; --bg:#ffffff; --bg-alt:#f1f7f6;
+  --text:#1f2937; --muted:#6b7280; --radius:14px;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#0f1716; --bg-alt:#16211f; --text:#e5eeec; --muted:#9db0ac; }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif; /* font hệ thống = tải nhanh */
+  color:var(--text); background:var(--bg); line-height:1.6; font-size:16px;
+  padding-bottom:70px; /* chừa chỗ cho thanh gọi cố định trên mobile */
+}
+img,iframe{max-width:100%;display:block}
+a{color:var(--primary)}
+.container{width:100%;max-width:1100px;margin:0 auto;padding:0 16px}
+section{padding:40px 0}
+section.alt{background:var(--bg-alt)}
+h1{font-size:1.75rem;line-height:1.25;margin-bottom:12px}
+h2{font-size:1.4rem;margin-bottom:16px}
+h3{font-size:1.1rem;margin-bottom:6px}
+p{margin-bottom:12px}
+
+/* Header */
+header{position:sticky;top:0;background:var(--bg);border-bottom:1px solid rgba(128,128,128,.25);z-index:10}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;max-width:1100px;margin:0 auto}
+.logo{font-weight:800;text-decoration:none;color:var(--primary);font-size:1.1rem}
+.nav-links{display:none}
+.nav-links a{margin-left:20px;text-decoration:none;color:var(--text);font-weight:500}
+
+/* Nút: đủ lớn để chạm (>=44px) */
+.btn{display:inline-block;min-height:44px;padding:12px 22px;border-radius:999px;background:var(--primary);
+  color:#fff;text-decoration:none;font-weight:600;border:0;cursor:pointer;font-size:1rem;text-align:center}
+.btn:hover{background:var(--primary-dark)}
+.btn.outline{background:transparent;color:var(--primary);border:2px solid var(--primary)}
+
+.hero{padding:48px 0 40px;background:linear-gradient(135deg,var(--bg-alt),var(--bg))}
+.hero .cta{display:flex;flex-direction:column;gap:10px;margin-top:20px}
+
+.grid{display:grid;grid-template-columns:1fr;gap:16px}
+.card{background:var(--bg);border:1px solid rgba(128,128,128,.25);border-radius:var(--radius);padding:18px}
+section.alt .card{background:var(--bg)}
+.stars{color:#f59e0b;letter-spacing:2px}
+.muted{color:var(--muted);font-size:.95rem}
+
+/* NAP: hiển thị dạng TEXT thật (không dùng ảnh) */
+.nap address{font-style:normal}
+.map{width:100%;height:300px;border:0;border-radius:var(--radius)}
+
+details{border:1px solid rgba(128,128,128,.25);border-radius:10px;padding:12px 14px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:600}
+
+form{display:grid;gap:12px}
+label{font-weight:600;font-size:.95rem}
+input,select,textarea{width:100%;padding:12px;border:1px solid rgba(128,128,128,.5);border-radius:10px;
+  font:inherit;background:var(--bg);color:var(--text);min-height:44px}
+#formMsg{margin-top:8px;font-weight:600;color:var(--primary)}
+
+footer{background:#0b1f1d;color:#cfe3df;padding:32px 0}
+footer a{color:#8fe3d6}
+
+/* Thanh gọi/đường đi cố định – chỉ hiện trên mobile */
+.sticky-bar{position:fixed;left:0;right:0;bottom:0;display:flex;gap:8px;padding:10px 12px;
+  background:var(--bg);border-top:1px solid rgba(128,128,128,.3);z-index:20}
+.sticky-bar a{flex:1}
+
+/* Tablet trở lên */
+@media (min-width:768px){
+  h1{font-size:2.4rem} h2{font-size:1.8rem}
+  .hero .cta{flex-direction:row}
+  .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+  .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+  .nav-links{display:block}
+  .sticky-bar{display:none}
+  body{padding-bottom:0}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="logo" href="#top">🦷 Sài Gòn Smile</a>
+    <nav class="nav-links" aria-label="Menu chính">
+      <a href="#dich-vu">Dịch vụ</a>
+      <a href="#danh-gia">Đánh giá</a>
+      <a href="#lien-he">Liên hệ</a>
+      <a href="#dat-lich">Đặt lịch</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO: H1 chứa từ khóa chính + khu vực -->
+  <section class="hero">
+    <div class="container">
+      <h1>Nha khoa uy tín tại Quận 3, TP.HCM</h1>
+      <p>Niềng răng, bọc răng sứ, trồng implant, tẩy trắng răng. Bác sĩ giàu kinh nghiệm, đặt lịch nhanh trong 1 phút.</p>
+      <p class="muted">⭐ 4.8/5 từ 126 đánh giá Google</p>
+      <div class="cta">
+        <a class="btn" href="tel:+842812345678">📞 Gọi ngay 028 1234 5678</a>
+        <a class="btn outline" href="#dat-lich">Đặt lịch khám</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DỊCH VỤ -->
+  <section id="dich-vu">
+    <div class="container">
+      <h2>Dịch vụ nha khoa tại Quận 3</h2>
+      <div class="grid cols-3">
+        <article class="card"><h3>Niềng răng</h3><p>Niềng mắc cài và niềng trong suốt, lộ trình rõ ràng.</p></article>
+        <article class="card"><h3>Bọc răng sứ</h3><p>Phục hình thẩm mỹ, bền màu, bảo hành dài hạn.</p></article>
+        <article class="card"><h3>Trồng răng Implant</h3><p>Giải pháp thay thế răng mất chắc chắn, tự nhiên.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEW: hiển thị đánh giá thật, kèm link để khách để lại review trên Google -->
+  <section id="danh-gia" class="alt">
+    <div class="container">
+      <h2>Khách hàng nói gì về chúng tôi</h2>
+      <div class="grid cols-3" id="reviewList"><!-- render bằng JS bên dưới --></div>
+      <p style="margin-top:16px">
+        <a class="btn outline" href="https://g.page/r/YOUR_GOOGLE_REVIEW_LINK/review" target="_blank" rel="noopener">Viết đánh giá trên Google</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <h2>Câu hỏi thường gặp</h2>
+      <details><summary>Phòng khám có làm việc cuối tuần không?</summary><p>Phòng khám mở cửa từ thứ Hai đến thứ Bảy, 8:00–19:00.</p></details>
+      <details><summary>Làm sao để đặt lịch khám?</summary><p>Gọi 028 1234 5678 hoặc điền form đặt lịch bên dưới.</p></details>
+    </div>
+  </section>
+
+  <!-- LIÊN HỆ: NAP dạng text + bản đồ -->
+  <section id="lien-he" class="alt">
+    <div class="container grid cols-2">
+      <div class="nap">
+        <h2>Liên hệ &amp; Chỉ đường</h2>
+        <address>
+          <strong>Nha khoa Sài Gòn Smile</strong><br>
+          123 Võ Văn Tần, Quận 3, TP. Hồ Chí Minh<br>
+          Điện thoại: <a href="tel:+842812345678">028 1234 5678</a>
+        </address>
+        <p style="margin-top:12px">🕗 Thứ Hai – Thứ Bảy: 8:00 – 19:00</p>
+        <p><a class="btn outline" target="_blank" rel="noopener"
+              href="https://www.google.com/maps/dir/?api=1&destination=123+Võ+Văn+Tần+Quận+3+TP+HCM">Chỉ đường Google Maps</a></p>
+      </div>
+      <!-- loading="lazy": chỉ tải bản đồ khi cuộn tới, giúp trang nhanh hơn -->
+      <iframe class="map" loading="lazy" title="Bản đồ Nha khoa Sài Gòn Smile"
+        src="https://www.google.com/maps?q=123+Võ+Văn+Tần+Quận+3+TP+HCM&output=embed"></iframe>
+    </div>
+  </section>
+
+  <!-- FORM ĐẶT LỊCH -->
+  <section id="dat-lich">
+    <div class="container" style="max-width:560px">
+      <h2>Đặt lịch khám</h2>
+      <form id="bookingForm" novalidate>
+        <div><label for="name">Họ tên</label><input id="name" name="name" autocomplete="name" required></div>
+        <div><label for="phone">Số điện thoại</label><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required></div>
+        <div><label for="service">Dịch vụ</label>
+          <select id="service" name="service">
+            <option>Niềng răng</option><option>Bọc răng sứ</option><option>Trồng Implant</option><option>Tẩy trắng</option>
+          </select></div>
+        <div><label for="note">Ghi chú</label><textarea id="note" name="note" rows="3"></textarea></div>
+        <button class="btn" type="submit">Gửi yêu cầu</button>
+        <p id="formMsg" role="status"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <!-- NAP lặp lại ở footer: đúng từng ký tự như GBP và schema -->
+    <p><strong>Nha khoa Sài Gòn Smile</strong></p>
+    <p>123 Võ Văn Tần, Quận 3, TP. Hồ Chí Minh · <a href="tel:+842812345678">028 1234 5678</a></p>
+    <p class="muted">© 2026 Nha khoa Sài Gòn Smile. Bản demo phục vụ nghiên cứu Local SEO.</p>
+  </div>
+</footer>
+
+<!-- Thanh hành động cố định cho mobile -->
+<div class="sticky-bar">
+  <a class="btn" href="tel:+842812345678">📞 Gọi ngay</a>
+  <a class="btn outline" target="_blank" rel="noopener"
+     href="https://www.google.com/maps/dir/?api=1&destination=123+Võ+Văn+Tần+Quận+3+TP+HCM">📍 Chỉ đường</a>
+</div>
+
+<script>
+/* Dữ liệu review mẫu – thay bằng review thật (hoặc lấy từ Google Places API ở phía server) */
+const reviews = [
+  { name: "Minh Anh", stars: 5, text: "Bác sĩ nhẹ nhàng, giải thích rõ ràng, không đau khi làm." },
+  { name: "Quốc Bảo", stars: 5, text: "Đặt lịch nhanh, phòng khám sạch sẽ, giá minh bạch." },
+  { name: "Thu Hà",   stars: 4, text: "Niềng răng được 8 tháng, kết quả rất tốt, nhân viên nhiệt tình." }
+];
+const list = document.getElementById("reviewList");
+reviews.forEach(r => {
+  const el = document.createElement("article");
+  el.className = "card";
+  el.innerHTML = '<div class="stars" aria-label="' + r.stars + ' sao">' +
+    "★".repeat(r.stars) + "☆".repeat(5 - r.stars) + "</div><p></p><p class='muted'></p>";
+  el.children[1].textContent = "“" + r.text + "”"; // dùng textContent để tránh XSS
+  el.children[2].textContent = "— " + r.name;
+  list.appendChild(el);
+});
+
+/* Form đặt lịch: kiểm tra cơ bản, thực tế cần gửi tới backend/Google Form/Zalo OA */
+document.getElementById("bookingForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  const name = this.name.value.trim();
+  const phone = this.phone.value.trim();
+  const msg = document.getElementById("formMsg");
+  if (!name || !/^(0|\+84)\d{8,10}$/.test(phone.replace(/\s/g, ""))) {
+    msg.textContent = "Vui lòng nhập họ tên và số điện thoại hợp lệ.";
+    return;
+  }
+  msg.textContent = "Cảm ơn " + name + "! Chúng tôi sẽ liên hệ trong thời gian sớm nhất.";
+  this.reset();
+});
+</script>
+</body>
+</html>
